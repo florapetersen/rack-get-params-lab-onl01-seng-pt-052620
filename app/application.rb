@@ -4,6 +4,10 @@ class Application
 
   @@cart = []
 
+  get "/cart" do
+    @@cart
+  end
+
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
